@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Projeto_IagoRodrigues_DMOS5</string>
+    <string name="buscar_estado">Buscar Estado</string>
+    <string name="buscar">Buscar</string>
+    <string name="textview_estado">textview estado</string>
+    <string name="textview_casos">textview casos</string>
+    <string name="casos_confirmados">Casos Confirmados</string>
+    <string name="textview_mortes">textview mortes</string>
+    <string name="mortes_confirmadas">Mortes Confirmadas</string>
+    <string name="textview_suspeitos">textview suspeitos</string>
+    <string name="casos_suspeitos">Casos Suspeitos</string>
+    <string name="textview_negativos">textview negativos</string>
+    <string name="testes_negativos">Testes Negativos</string>
+    <string name="acompanhar">Acompanhar</string>
 </resources>

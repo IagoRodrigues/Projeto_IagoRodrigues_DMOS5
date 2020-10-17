@@ -1,8 +1,10 @@
-package br.edu.dmos5.projeto_iagorodrigues_dmos5;
+package br.edu.dmos5.projeto_iagorodrigues_dmos5.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import br.edu.dmos5.projeto_iagorodrigues_dmos5.R;
 
 public class MainActivity extends AppCompatActivity {
 
