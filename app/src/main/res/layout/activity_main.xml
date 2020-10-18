@@ -6,12 +6,23 @@
     android:layout_height="match_parent"
     tools:context=".view.MainActivity">
 
+    <ImageView
+        android:id="@+id/imagem_vazia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:src="@drawable/ic_vazio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraint_busca"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:visibility="visible"
         android:padding="25sp"
+        android:visibility="visible"
         app:layout_constraintBottom_toTopOf="@+id/constraint_dados"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,9 +32,9 @@
             android:id="@+id/button_buscar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="24dp"
             android:text="@string/buscar"
             android:textAlignment="center"
-            android:layout_margin="24dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/editText_estado"
@@ -36,6 +47,8 @@
             android:layout_margin="24dp"
             android:hint="@string/buscar_estado"
             android:inputType="text"
+            android:textColorHint="#000000"
+            android:textSize="20sp"
             android:textAlignment="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/button_buscar"
