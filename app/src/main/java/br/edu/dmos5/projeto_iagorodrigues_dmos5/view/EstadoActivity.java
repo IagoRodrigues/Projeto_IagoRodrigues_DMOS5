@@ -2,12 +2,16 @@ package br.edu.dmos5.projeto_iagorodrigues_dmos5.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.Locale;
 
 import br.edu.dmos5.projeto_iagorodrigues_dmos5.R;
 import br.edu.dmos5.projeto_iagorodrigues_dmos5.api.RetrofitService;
@@ -23,7 +27,6 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
     private static final String BASE_URL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/";
 
     //Elementos de layout
-    private TextView infos;
     private TextView estado;
     private TextView casos;
     private TextView mortes;
@@ -53,7 +56,8 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
         mRetrofit = new Retrofit.Builder().baseUrl(BASE_URL).addConverterFactory(GsonConverterFactory.create()).build();
         RetrofitService mRetrofitService = mRetrofit.create(RetrofitService.class);
 
-        Call<Estado> call = mRetrofitService.getDados(this.uf);
+        System.out.println("BUSCANDO POR: "+ uf);
+        Call<Estado> call = mRetrofitService.getDados(uf);
         
         call.enqueue(new Callback<Estado>() {
             @Override
@@ -73,13 +77,13 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
 
     private void updateUI(Estado meuEstado) {
         if(meuEstado != null){
-            System.out.println(meuEstado);
-
+            System.out.println("Meu Estado: " + meuEstado.getNome());
             estado.setText(meuEstado.getNome());
             casos.setText(meuEstado.getCases());
             mortes.setText(meuEstado.getDeaths());
             suspeitos.setText(meuEstado.getSuspects());
             negativos.setText(meuEstado.getRefuses());
+
         }
     }
 
@@ -96,6 +100,7 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onClick(View view) {
-
+        if (view.getId() == R.id.button_follow) {
+        }
     }
 }

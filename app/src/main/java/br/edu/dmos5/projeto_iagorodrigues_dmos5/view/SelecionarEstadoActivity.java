@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -43,7 +42,8 @@ public class SelecionarEstadoActivity extends AppCompatActivity {
         estadosReciclerView.setLayoutManager(layoutManager);
 
         //Carrega a fonte de dados
-        estadoList = EstadoDao.recuperateAll();
+        EstadoDao estadoDao = new EstadoDao(SelecionarEstadoActivity.this);
+        estadoList = estadoDao.buscaTodos();
 
         estadoAdapter = new ItemEstadoAdapter(estadoList);
         estadosReciclerView.setAdapter(estadoAdapter);
@@ -55,8 +55,8 @@ public class SelecionarEstadoActivity extends AppCompatActivity {
 
                 Intent in = new Intent(SelecionarEstadoActivity.this, EstadoActivity.class);
                 in.putExtra("uf", uf);
+                System.out.println("Estou passando: " + uf);
                 startActivity(in);
-
             }
         });
     }

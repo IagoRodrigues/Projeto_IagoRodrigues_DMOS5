@@ -44,37 +44,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getLayoutElements();
     }
 
+
     private void getLayoutElements() {
         //O texto de informações começa visível
         this.infos = findViewById(R.id.infos);
         this.infos.setVisibility(View.VISIBLE);
 
-        this.estado = findViewById(R.id.textView_estado);
-        this.casos = findViewById(R.id.textView_casos);
-        this.mortes = findViewById(R.id.textView_mortes);
-        this.suspeitos = findViewById(R.id.textView_suspeitos);
-        this.negativos = findViewById(R.id.textView_nagativos);
-
         this.buscar = findViewById(R.id.button_buscar);
         this.buscar.setOnClickListener(this);
-
-        //O painel com os dados do estado selecionado começa invisivel
-        this.constraint_dados = findViewById(R.id.constraint_dados);
-        this.constraint_dados.setVisibility(View.GONE);
     }
 
     @Override
     public void onClick(View view) {
         switch (view.getId()){
-            case R.id.button_buscar:
-                System.out.println("Pegou o clique");
+            case R.id.button_buscar: ;
                 if(temPermissao()){
-                    System.out.println("Teve permissão");
-
                     buscarEstado();
                 }else{
-                    System.out.println("Teve que solicitar");
-
                     solicitaPermissao();
                 }
         }

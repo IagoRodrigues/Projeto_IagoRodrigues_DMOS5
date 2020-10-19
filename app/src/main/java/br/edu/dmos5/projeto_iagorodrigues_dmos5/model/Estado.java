@@ -17,6 +17,10 @@ public class Estado implements Serializable {
         this.uf = uf;
     }
 
+    public Estado(String uf) {
+        this.uf = uf;
+    }
+
     public String getNome() {
         return state;
     }
@@ -35,7 +39,7 @@ public class Estado implements Serializable {
 
     @Override
     public String toString() {
-        return state.toString();
+        return state;
     }
 
     public Estado(int uid, String uf, String state, String cases, String deaths, String suspects, String refuses) {
