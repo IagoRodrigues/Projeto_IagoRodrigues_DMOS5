@@ -3,15 +3,8 @@ package br.edu.dmos5.projeto_iagorodrigues_dmos5.view;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
 
 import br.edu.dmos5.projeto_iagorodrigues_dmos5.R;
 import br.edu.dmos5.projeto_iagorodrigues_dmos5.api.RetrofitService;
@@ -22,7 +15,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class EstadoActivity extends AppCompatActivity implements View.OnClickListener{
+public class EstadoActivity extends AppCompatActivity{
 
     private static final String BASE_URL = "https://covid19-brazil-api.now.sh/api/report/v1/brazil/uf/";
 
@@ -32,8 +25,6 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
     private TextView mortes;
     private TextView suspeitos;
     private TextView negativos;
-
-    private Button seguir;
 
     //Necessário para a API
     private Retrofit mRetrofit;
@@ -94,13 +85,6 @@ public class EstadoActivity extends AppCompatActivity implements View.OnClickLis
         this.suspeitos = findViewById(R.id.textView_suspeitos);
         this.negativos = findViewById(R.id.textView_nagativos);
 
-        this.seguir = findViewById(R.id.button_follow);
-        this.seguir.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.button_follow) {
-        }
-    }
 }

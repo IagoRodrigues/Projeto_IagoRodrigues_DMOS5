@@ -11,7 +11,7 @@
     <string name="textview_negativos">textview negativos</string>
     <string name="testes_negativos">Testes Negativos</string>
     <string name="acompanhar">Acompanhar</string>
-    <string name="inf">Esse aplicativo foi criado com o intuito de facilitar o acompanhamento aos casos de COVID-19 nos estados Brasileiros. selecione um estado na lista para ter acesso às estatísticas</string>
+    <string name="inf">Esse aplicativo foi criado com o intuito de facilitar o acompanhamento aos casos de COVID-19 nos estados Brasileiros. Selecione um estado na lista para ter acesso às estatísticas</string>
     <string name="explicacao_permissao">A busca do estado depende do acesso a internet, sem essa permissão o aplicativo não consegue recuperar a informação desejada.</string>
     <string name="botao_fornecer">Fornecer</string>
     <string name="botao_nao_fornecer">Agora não</string>

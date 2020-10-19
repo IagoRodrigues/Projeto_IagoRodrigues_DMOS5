@@ -121,40 +121,4 @@ public class EstadoDao {
         mDatabase.update(SQLiteHelper.TABLE_NAME, values, where, null);
         mDatabase.close();
     }
-
-    /*
-    public static final List<Estado> recuperateAll(){
-        ArrayList<Estado> arrayList = new ArrayList<>(26);
-
-        this.adiciona((new Estado("Minas Gerais", "mg"));
-        this.adiciona(new Estado("Minas Gerais", "mg"));
-        this.adiciona(new Estado("São Paulo", "sp"));
-        this.adiciona(new Estado("Rio Grande do Sul", "rs"));
-        this.adiciona(new Estado("Bahia", "ba"));
-        this.adiciona(new Estado("Paraná", "pr"));
-        this.adiciona(new Estado("Santa Catarina", "sc"));
-        this.adiciona(new Estado("Goiás", "go"));
-        this.adiciona(new Estado("Piauí", "pi"));
-        this.adiciona(new Estado("Paraíba", "pb"));
-        this.adiciona(new Estado("Maranhão", "ma"));
-        this.adiciona(new Estado("Pernanbuco", "pb"));
-        this.adiciona(new Estado("Ceará", "ce"));
-        this.adiciona(new Estado("Rio Grande do Norte", "rn"));
-        this.adiciona(new Estado("Pará", "pa"));
-        this.adiciona(new Estado("Mato Grosso", "mt"));
-        this.adiciona(new Estado("Tocantins", "to"));
-        this.adiciona(new Estado("Alagoas", "al"));
-        this.adiciona(new Estado("Rio de Janeiro", "rj"));
-        this.adiciona(new Estado("Mato Grosso do Sul", "ms"));
-        this.adiciona(new Estado("Espírito Santo", "es"));
-        this.adiciona(new Estado("Sergipe", "se"));
-        this.adiciona(new Estado("Amazonas", "am"));
-        this.adiciona(new Estado("Rondônia", "ro"));
-        this.adiciona(new Estado("Acre", "ac"));
-        this.adiciona(new Estado("Amapá", "ap"));
-        this.adiciona(new Estado("Roraima", "rr"));
-
-        return arrayList;
-    }*/
-
 }

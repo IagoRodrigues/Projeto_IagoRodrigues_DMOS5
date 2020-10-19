@@ -26,15 +26,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     //Elementos de layout
     private TextView infos;
-    private TextView estado;
-    private TextView casos;
-    private TextView mortes;
-    private TextView suspeitos;
-    private TextView negativos;
-
     private Button buscar;
-
-    private View constraint_dados;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +48,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
-            case R.id.button_buscar: ;
-                if(temPermissao()){
-                    buscarEstado();
-                }else{
-                    solicitaPermissao();
-                }
+        if (view.getId() == R.id.button_buscar) {
+            if (temPermissao()) {
+                buscarEstado();
+            } else {
+                solicitaPermissao();
+            }
         }
     }
 
@@ -94,7 +85,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     })
                     .show();
         } else {
-            System.out.println("solicitaPermissao else");
             ActivityCompat.requestPermissions(
                     this,
                     new String[]{
